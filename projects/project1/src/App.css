@@ -58,6 +58,8 @@ body{
   
   .tw-followCard-button:hover {
     opacity: .8;
+    background-color:#09f;
+    transition: linear .2s;
   }
   
   .tw-followCard-text {

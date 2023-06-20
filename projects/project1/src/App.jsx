@@ -1,21 +1,21 @@
-import "./App.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx';
+import "./App.css"
+
 export function App(){
+    const formatUsername=(username)=>`@${username}`;
     return(
-    <article className="tw-followCard">
-        <header className="tw-followCard-header">
-            <img 
-            className="tw-followCard-avatar"
-            src="https://unavatar.io/alejoevilches" 
-            alt="Avatar del usuario" 
-            />
-            <div className="tw-followCard-info">
-                <strong>Alejo Vilches</strong>
-                <p>@alejoevilches</p>
-            </div>
-        </header>
-        <aside>
-            <button className="tw-followCard-button">Seguir</button>
-        </aside>
-    </article>
+    <>
+        <TwitterFollowCard formatUsername={formatUsername} username="alejoevilches">
+          Alejo Vilches
+        </TwitterFollowCard>
+        <TwitterFollowCard formatUsername={formatUsername} >
+          Gonzalo Pozzo
+        </TwitterFollowCard>
+        <TwitterFollowCard formatUsername={formatUsername}  username="midudev">
+          Miguel Angel Duran
+        </TwitterFollowCard>
+      </>
     )
 }
