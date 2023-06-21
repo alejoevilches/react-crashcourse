@@ -48,6 +48,7 @@ body{
   .tw-followCard-button {
     cursor: pointer;
     margin-left: 16px;
+    width:max-content;
     border: 0;
     border-radius: 999px;
     padding: 6px 16px;
